@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Cookie Jar</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   <style>
+    body{
+      background-color:#ffd5b8;
+    }
+    .navbar {
+    margin-bottom: 0;
+    background-color: #ffd5b8;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+    font-weight: bold;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #ffd5b8 !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+ .jumbotron {
+    background-color:#ffd5b8;
+    color: #fff;
+    padding: 200px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .btn{
+    background-color:#ffb9b3;
+   
+  }
+  .btn:hover{
+    background-color:#ffb9b3;
+    border:#ffb9b3;
+  }
+  #welcome{
+    font-size:60px;
+  }
+  #to{
+    font-size:30px;
+  }
+  #cookiejar{
+    font-size:40px;
+  }
+    </style>
+  </head>
+ 
+  <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" id = "logo" href="#myPage"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="timer.html">COOKIE TIMER</a></li>
+        <li><a href="jar.html">MY COOKIE JAR</a></li>
+        <li><a href="mice.html">MY MICE</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="jumbotron text-center">
+  <h1 id = "welcome">Welcome</h1> 
+  <h1 id = "to">to</h1> 
+  <h1 id = "cookiejar">Cookie Jar!</h1> 
+  <br>
+  <p>Have a cookie, you deserve it!</p> 
+  <form>
+    <div class="input-group">
+      <div class="input-group-btn">
+        <a href = "timer.html"><button type="button" class="btn btn-danger">Gimme Cookie!</button></a>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
