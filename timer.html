@@ -9,7 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600;900&display=swap" rel="stylesheet">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link href="css-circular-prog-bar.css" rel="stylesheet">
+
    <style>
+
     body{
       background-color:#ffd5b8;
     }
@@ -71,6 +74,21 @@
     text-align:center;
     padding:250px;
   }
+#container{
+ text-align:center;
+}
+#myProgress {
+  width: 50%;
+  background-color:#fff;
+  display:inline-block;
+}
+
+#myBar {
+  width: 0%;
+  height: 30px;
+  background-color:#acecd5 ;
+  text-align:align-left;
+}
     </style>
   </head>
  
@@ -99,23 +117,13 @@
 <div class = "center">
 <img src= "testjar.png" >
 </div>
-<svg
-  class="progress-ring"
-  height="120"
-  width="120"
->
-  <circle
-    class="progress-ring__circle"
-    stroke-width="1"
-    fill="transparent"
-    r="58"
-    cx="60"
-    cy="60"
-  />
-</svg>
+<div id = 'container'>
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+</div>
+<p id = "timeleft"></p>
 
-
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
   </body>
 </html>
