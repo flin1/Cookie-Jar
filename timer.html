@@ -145,7 +145,7 @@ display:inline-block;
 
 
 <div class = "center">
-<img src= "jar2.png" id = "jar">
+<img src= "1cookie.png" id = "jar">
 
 </div>
 <br>
@@ -168,6 +168,28 @@ display:inline-block;
 
 
 <script>
+
+//progress bar
+
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 18000);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+}
+
 // timer for 30 minutes from now
 var cookieCount = 0;
 function myTimer(){
@@ -199,39 +221,66 @@ function run_clock(id,endtime){
 	update_clock(); // run function once at first to avoid delay
 	var timeinterval = setInterval(update_clock,1000);
 }
+move();
 run_clock('timer',deadline);
+
 }
 //run function
 myTimer();
+
 //restart timer button
 var restart = document.getElementById("restart");
 
 restart.onclick = function(){
   myTimer();
+  move();
   document.getElementById("restart").style.display = "none";
   document.getElementById("cookie").style.display = "none";
   document.getElementById("congrats").style.display = "none";
   };
+if(cookiecount = 0){
 
-//progress bar
-var i = 0;
-function move() {
-  if (i == 0) {
-    i = 1;
-    var elem = document.getElementById("myBar");
-    var width = 1;
-    var id = setInterval(frame, 10);
-    function frame() {
-      if (width >= 100) {
-        clearInterval(id);
-        i = 0;
-      } else {
-        width++;
-        elem.style.width = width + "%";
-      }
-    }
-  }
+}if else(cookie count = 1){
+
+}if else(cookie count = 1){
+  
+}if else(cookie count = 1){
+  
+}if else(cookie count = 1){
+  
+}if else(cookie count = 1){
+  
+}if else(cookie count = 1){
+  
+}if else(cookie count = 1){
+  
+}if else(cookie count = 1){
+  
+}if else(cookie count = 1){
+  
+}if else(cookie count = 1){
+  
+}if else(cookie count = 1){
+  
+}if else(cookie count = 1){
+  
+}if else(cookie count = 1){
+  
+}if else(cookie count = 1){
+  
+}if else(cookie count = 1){
+  
+}if else(cookie count = 1){
+  
+}if else(cookie count = 1){
+  
+}if else(cookie count = 1){
+  
+} else(cookie count > 18){
+  
+  
 }
+
 </script>
 <script src="script.js"></script>
   </body>
