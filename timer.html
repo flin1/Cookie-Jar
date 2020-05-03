@@ -170,13 +170,14 @@ display:inline-block;
 
 //progress bar
 var cookieCount = 0;
+var miceCount = 0;
 var i = 0;
 function move() {
   if (i == 0) {
     i = 1;
     var elem = document.getElementById("myBar");
     var width = 1;
-    var id = setInterval(frame, 18000);
+    var id = setInterval(frame, 6000);
     function frame() {
       if (width >= 100) {
         clearInterval(id);
@@ -245,12 +246,13 @@ document.getElementById("jar").src = "18cookie.png";
 else{
 document.getElementById("jar").src = "jar2.png";
 cookieCount = 0;
+miceCount++;
 }
 }
 
 // timer for 30 minutes from now
 function myTimer(){
-var time_in_minutes = 1;
+var time_in_minutes = 10;
 var current_time = Date.parse(new Date());
 var deadline = new Date(current_time + time_in_minutes*60*1000);
 
@@ -296,6 +298,24 @@ restart.onclick = function(){
   document.getElementById("cookie").style.display = "none";
   document.getElementById("congrats").style.display = "none";
   };
+if(miceCount = 0){
+  
+}else if(miceCount = 1){
+   document.getElementById("mouse1").style.display = "block";
+}
+else if(miceCount = 2){
+   document.getElementById("mouse2").style.display = "block";
+}
+else if(miceCount = 3){
+   document.getElementById("mouse3").style.display = "block";
+}
+else if(miceCount = 4){
+   document.getElementById("mouse4").style.display = "block";
+}else if (miceCount = 5){
+   document.getElementById("mouse5").style.display = "block";
+}else{
+
+}
 
 
 

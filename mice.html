@@ -62,6 +62,32 @@
   #cookiejar{
     font-size:40px;
   }
+  #box{
+    text-align:center;
+    margin-top:150px;
+  }
+  #mice{
+    display:inline-block;
+  }
+  #mouse1{
+    display:none;
+  }
+  #mouse2{
+    display:none;
+  }
+  #mouse3{
+    display:none;
+  }
+  #mouse4{
+    display:none;
+  }
+  #mouse5{
+    display:none;
+  }
+  #header{
+      color:#fff;
+      font-family: 'Raleway', sans-serif;
+  }
     </style>
   </head>
  
@@ -86,10 +112,185 @@
   </div>
 </nav>
 
+<div id = "box">
+<div id = "mice">
+<h2 id = "header">Your mice!</h2>
+<img src = "mouse1.png" id = "mouse1">
+<p></p>
+<br>
+<img src = "mouse2.png" id = "mouse2">
+<p></p>
+<br>
+<img src = "mouse3.png" id = "mouse3">
+<p></p>
+<br>
+<img src = "mouse4.png" id = "mouse4">
+<p></p>
+<br>
+<img src = "mouse5.png" id = "mouse5">
+<p></p>
+</div>
+</div>
+<script>//progress bar
+var cookieCount = 0;
+var miceCount = 0;
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 6000);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+        elem.style.width = "0%";
+      } else {
+        width++;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+}
+//change cookie jar
+function jar(){
+if(cookieCount == 1){
+  document.getElementById("jar").src = "1cookie.png";
+}else if (cookieCount == 2){
+document.getElementById("jar").src = "2cookie.png";
+}else if (cookieCount == 3){
+document.getElementById("jar").src = "3cookie.png";
+}
+else if (cookieCount == 4){
+document.getElementById("jar").src = "4cookie.png";
+}
+else if (cookieCount == 5){
+document.getElementById("jar").src = "5cookie.png";
+}
+else if (cookieCount == 6){
+document.getElementById("jar").src = "6cookie.png";
+}
+else if (cookieCount == 7){
+document.getElementById("jar").src = "7cookie.png";
+}
+else if (cookieCount == 8){
+document.getElementById("jar").src = "8cookie.png";
+}
+else if (cookieCount == 9){
+document.getElementById("jar").src = "9cookie.png";
+}
+else if (cookieCount == 10){
+document.getElementById("jar").src = "10cookie.png";
+}
+else if (cookieCount == 11){
+document.getElementById("jar").src = "11cookie.png";
+}
+else if (cookieCount == 12){
+document.getElementById("jar").src = "12cookie.png";
+}
+else if (cookieCount == 13){
+document.getElementById("jar").src = "13cookie.png";
+}
+else if (cookieCount == 14){
+document.getElementById("jar").src = "14cookie.png";
+}
+else if (cookieCount == 15){
+document.getElementById("jar").src = "15cookie.png";
+}
+else if (cookieCount == 16){
+document.getElementById("jar").src = "16cookie.png";
+}
+else if (cookieCount == 17){
+document.getElementById("jar").src = "17cookie.png";
+}else if (cookieCount == 18){
+document.getElementById("jar").src = "18cookie.png";
+}
+else{
+document.getElementById("jar").src = "jar2.png";
+cookieCount = 0;
+miceCount++;
+}
+}
+
+// timer for 30 minutes from now
+function myTimer(){
+var time_in_minutes = 10;
+var current_time = Date.parse(new Date());
+var deadline = new Date(current_time + time_in_minutes*60*1000);
 
 
+function time_remaining(endtime){
+	var t = Date.parse(endtime) - Date.parse(new Date());
+	var seconds = Math.floor( (t/1000) % 60 );
+	var minutes = Math.floor( (t/1000/60) % 60 );
+	var hours = Math.floor( (t/(1000*60*60)) % 24 );
+	var days = Math.floor( t/(1000*60*60*24) );
+	return {'total':t, 'days':days, 'hours':hours, 'minutes':minutes, 'seconds':seconds};
+}
+function run_clock(id,endtime){
+	var clock = document.getElementById(id);
+	function update_clock(){
+		var t = time_remaining(endtime);
+		clock.innerHTML = "<span class = 'timetext'>"+ t.minutes+':'+t.seconds+"</span>";
+		if(t.total<=0){ clearInterval(timeinterval); }
+    if(t.minutes == 0 && t.seconds == 0){document.getElementById("restart").style.display = "block";
+    document.getElementById("cookie").style.display = "block";
+    document.getElementById("congrats").style.display = "block";
+    cookieCount++;
+    jar();
+    }
+	}
+	update_clock(); // run function once at first to avoid delay
+	var timeinterval = setInterval(update_clock,1000);
+}
+move();
+run_clock('timer',deadline);
+}
+//run function
+myTimer();
 
+//restart timer button
+var restart = document.getElementById("restart");
 
+restart.onclick = function(){
+  myTimer();
+  move();
+  document.getElementById("restart").style.display = "none";
+  document.getElementById("cookie").style.display = "none";
+  document.getElementById("congrats").style.display = "none";
+  };
+
+if(miceCount == 0){
+  
+}else if(miceCount == 1){
+   document.getElementById("mouse1").style.display = "block";
+}
+else if(miceCount == 2){
+   document.getElementById("mouse2").style.display = "block";
+    document.getElementById("mouse1").style.display = "block";
+}
+else if(miceCount == 3){
+   document.getElementById("mouse3").style.display = "block";
+   document.getElementById("mouse2").style.display = "block";
+    document.getElementById("mouse1").style.display = "block";
+}
+else if(miceCount == 4){
+   document.getElementById("mouse4").style.display = "block";
+    document.getElementById("mouse3").style.display = "block";
+   document.getElementById("mouse2").style.display = "block";
+    document.getElementById("mouse1").style.display = "block";
+}else if (miceCount == 5){
+   document.getElementById("mouse5").style.display = "block";
+   document.getElementById("mouse4").style.display = "block";
+    document.getElementById("mouse3").style.display = "block";
+   document.getElementById("mouse2").style.display = "block";
+    document.getElementById("mouse1").style.display = "block";
+}else{
+
+}
+
+</script>
     <script src="script.js"></script>
   </body>
 </html>
