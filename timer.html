@@ -145,8 +145,7 @@ display:inline-block;
 
 
 <div class = "center">
-<img src= "1cookie.png" id = "jar">
-
+<img src= "jar2.png" id = "jar">
 </div>
 <br>
 <div id = 'container'>
@@ -170,7 +169,7 @@ display:inline-block;
 <script>
 
 //progress bar
-
+var cookieCount = 0;
 var i = 0;
 function move() {
   if (i == 0) {
@@ -182,6 +181,7 @@ function move() {
       if (width >= 100) {
         clearInterval(id);
         i = 0;
+        elem.style.width = "0%";
       } else {
         width++;
         elem.style.width = width + "%";
@@ -189,9 +189,66 @@ function move() {
     }
   }
 }
+//change cookie jar
+function jar(){
+if(cookieCount == 1){
+  document.getElementById("jar").src = "1cookie.png";
+}else if (cookieCount == 2){
+document.getElementById("jar").src = "2cookie.png";
+}else if (cookieCount == 3){
+document.getElementById("jar").src = "3cookie.png";
+}
+else if (cookieCount == 4){
+document.getElementById("jar").src = "4cookie.png";
+}
+else if (cookieCount == 5){
+document.getElementById("jar").src = "5cookie.png";
+}
+else if (cookieCount == 6){
+document.getElementById("jar").src = "6cookie.png";
+}
+else if (cookieCount == 7){
+document.getElementById("jar").src = "7cookie.png";
+}
+else if (cookieCount == 8){
+document.getElementById("jar").src = "8cookie.png";
+}
+else if (cookieCount == 9){
+document.getElementById("jar").src = "9cookie.png";
+}
+else if (cookieCount == 10){
+document.getElementById("jar").src = "10cookie.png";
+}
+else if (cookieCount == 11){
+document.getElementById("jar").src = "11cookie.png";
+}
+else if (cookieCount == 12){
+document.getElementById("jar").src = "12cookie.png";
+}
+else if (cookieCount == 13){
+document.getElementById("jar").src = "13cookie.png";
+}
+else if (cookieCount == 14){
+document.getElementById("jar").src = "14cookie.png";
+}
+else if (cookieCount == 15){
+document.getElementById("jar").src = "15cookie.png";
+}
+else if (cookieCount == 16){
+document.getElementById("jar").src = "16cookie.png";
+}
+else if (cookieCount == 17){
+document.getElementById("jar").src = "17cookie.png";
+}else if (cookieCount == 18){
+document.getElementById("jar").src = "18cookie.png";
+}
+else{
+document.getElementById("jar").src = "jar2.png";
+cookieCount = 0;
+}
+}
 
 // timer for 30 minutes from now
-var cookieCount = 0;
 function myTimer(){
 var time_in_minutes = 1;
 var current_time = Date.parse(new Date());
@@ -212,10 +269,11 @@ function run_clock(id,endtime){
 		var t = time_remaining(endtime);
 		clock.innerHTML = "<span class = 'timetext'>"+ t.minutes+':'+t.seconds+"</span>";
 		if(t.total<=0){ clearInterval(timeinterval); }
-    if(t.minutes == 0 && t.seconds == 0){document.getElementById("restart").style.display = "block"
-    document.getElementById("cookie").style.display = "block"
+    if(t.minutes == 0 && t.seconds == 0){document.getElementById("restart").style.display = "block";
+    document.getElementById("cookie").style.display = "block";
     document.getElementById("congrats").style.display = "block";
-    cookiecount++;
+    cookieCount++;
+    jar();
     }
 	}
 	update_clock(); // run function once at first to avoid delay
@@ -238,48 +296,8 @@ restart.onclick = function(){
   document.getElementById("cookie").style.display = "none";
   document.getElementById("congrats").style.display = "none";
   };
-if(cookiecount = 0){
 
-}if else(cookie count = 1){
 
-}if else(cookie count = 1){
-  
-}if else(cookie count = 1){
-  
-}if else(cookie count = 1){
-  
-}if else(cookie count = 1){
-  
-}if else(cookie count = 1){
-  
-}if else(cookie count = 1){
-  
-}if else(cookie count = 1){
-  
-}if else(cookie count = 1){
-  
-}if else(cookie count = 1){
-  
-}if else(cookie count = 1){
-  
-}if else(cookie count = 1){
-  
-}if else(cookie count = 1){
-  
-}if else(cookie count = 1){
-  
-}if else(cookie count = 1){
-  
-}if else(cookie count = 1){
-  
-}if else(cookie count = 1){
-  
-}if else(cookie count = 1){
-  
-} else(cookie count > 18){
-  
-  
-}
 
 </script>
 <script src="script.js"></script>
